@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\begin{document}
+\title{Iris Dataset}
+\maketitle
+\BLOCK{for i in range(len(figs))}
+\clearpage
+\section{Figure \VAR{i}}
+   \begin{figure}[!htb]
+       \includegraphics{\VAR{figs[i][0]}}
+       \caption{\VAR{figs[i][1]}}
+   \end{figure}
+\BLOCK{endfor}
+\clearpage
+
+\BLOCK{for i in range(len(dfs))}
+    \section{Table \VAR{i}}
+       \VAR{dfs[i].to_latex()}
+\BLOCK{endfor}
+\end{document}
